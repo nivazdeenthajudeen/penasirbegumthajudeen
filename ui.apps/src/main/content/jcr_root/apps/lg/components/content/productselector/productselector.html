@@ -1,0 +1,10 @@
+<label for="cars">Choose a Category:</label>
+<select name="cars" id="cars">
+<sly data-sly-use.prodobj="${'com.company.core.models.CategorySelectorModel'}">
+	<sly data-sly-list="${prodobj.categoryTags}">
+	 <option value="${item.tagName}">${item.tagtitle}</option>
+	 </sly>
+ </sly>
+</select>
+<sly  data-sly-include="selectedproducts.html">
+</sly>
